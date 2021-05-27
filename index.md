@@ -4,7 +4,7 @@ The program prompts user to enter cipher text, ciphered using Caesar cipher algo
 
 The brute force option is not recommended since it will print the output of all keys that have been tried and its upon the user to look for the text that makes sense.
 
-##Sample Run
+## Sample Run
 ![cracker_running](https://user-images.githubusercontent.com/47497857/119894731-f66f4e80-bf0a-11eb-99e5-e2016cc5cf96.png)
 
 ### Markdown
