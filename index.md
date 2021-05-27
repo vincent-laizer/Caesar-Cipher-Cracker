@@ -5,9 +5,38 @@ The program prompts user to enter cipher text, ciphered using Caesar cipher algo
 The brute force option is not recommended since it will print the output of all keys that have been tried and its upon the user to look for the text that makes sense.
 
 ## Sample Run
-![cracker_running](https://user-images.githubusercontent.com/47497857/119894731-f66f4e80-bf0a-11eb-99e5-e2016cc5cf96.png)
+![Uploading cracker_running.png…]()
 
-### Markdown
+
+### Functions Implemented
+##### Brute force function
+A loop is to be used to go through all possible keys for the given table
+```
+string bruteForceCracker(string cipherText, int key){
+	string plainText;
+	int value;
+	for(int i=0; i< cipherText.length(); i++){
+		for(int j=0; j<sizeof(alphabet); j++){
+
+			if( alphabet[j] == cipherText[i] ){
+
+				value = j-key;
+				if(value < 0){
+					value = value + sizeof(alphabet);
+				}
+				else{
+					value = (j-key)%sizeof(alphabet);
+				}
+
+				plainText = plainText + alphabet[value];
+			}
+
+		}
+	}
+	return plainText;
+}
+
+```
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
